@@ -3,7 +3,6 @@ const path=require("path");
 // server create
 const app = express();
 
-const env=require("./config/secrets")["process.env.NODE_ENV"];
 const cookieParser=require("cookie-parser");
 const userRouter = require("./router/userRouter");
 const planRouter = require("./router/planRouter");
@@ -13,7 +12,7 @@ const bookingRouter=require("./router/bookingRouter");
 const ErrorExtender=require("./utility/ErrorExtender")
 const globalErrorHandler=require("./utility/globalErrorHandler")
 //global object => heroku => set variable || dev
-process.env.NODE_ENV=process.env.NODE_ENV || "dev"
+process.env.NODE_ENV=process.env.NODE_ENV || "production"
 
 
 // 1.middleware
