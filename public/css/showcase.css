@@ -27,7 +27,7 @@ h2{
 }
 
 h2::after{
-  content: "";
+    content: "";
     display: block;
     height: 0.2rem;
     background-color: #e74c3c;
